@@ -13,3 +13,185 @@ Migrating to CreateProverbs (20180209040450)
   [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4349271734177275815)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4349271734177275815)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProverbs (20180209040450)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.4ms)[0m  [1m[35mDROP TABLE "proverbs"[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20180209040450"]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4349271734177275815)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4349271734177275815)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProverbs (20180209040450)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (51.1ms)[0m  [1m[35mCREATE TABLE "proverbs" ("id" bigserial primary key, "content" character varying NOT NULL, "meaning" character varying NOT NULL, "source" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180209040450"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4349271734177275815)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "That person or action makes my ass itch."], ["meaning", "-said to describe something or someone annoying or irritating"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.472532"], ["updated_at", "2018-02-09 12:59:33.472532"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "...tryna make a dollar out of 15 cents"], ["meaning", "-said to indicate that someone is over-dramatizing a situation or bragging about something insignificant. "], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.484269"], ["updated_at", "2018-02-09 12:59:33.484269"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "You don’t have to go home, but you can’t stay here!"], ["meaning", "-used after a party starts wrapping up. "], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.489677"], ["updated_at", "2018-02-09 12:59:33.489677"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "A hard head, make a soft behind"], ["meaning", "-usually said to warn a child that not obeying their parents will result in a whoopin."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.494504"], ["updated_at", "2018-02-09 12:59:33.494504"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "You’re doing the most!"], ["meaning", "-often said in response to a person who the user feels is simply doing something BOTH unnecessary and detrimental. "], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.499076"], ["updated_at", "2018-02-09 12:59:33.499076"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "No shit Sherlock!"], ["meaning", "-you just said something really obvious.  "], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.504166"], ["updated_at", "2018-02-09 12:59:33.504166"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Don’t shit under a tree, because one day it will get hot and you will need some shade."], ["meaning", "-a warning against turning on someone who supported you in the past"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.508820"], ["updated_at", "2018-02-09 12:59:33.508820"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Stop crying before I give you something to cry about!"], ["meaning", "-a statement used when someone does, in fact, have something to cry about, because their mother just accosted them physically"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.513836"], ["updated_at", "2018-02-09 12:59:33.513836"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "I may have been born at night but I wasn’t born last night."], ["meaning", "-usually mentioned when someone is trying to get over. "], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.518500"], ["updated_at", "2018-02-09 12:59:33.518500"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "I am blessed and highly favored."], ["meaning", "-used to signify that the Lord has been very good to you."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.523021"], ["updated_at", "2018-02-09 12:59:33.523021"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "No shade, but…"], ["meaning", "-used in a way so that you can say something offensive to someone without getting called out for it. Similar to “No offense."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.528255"], ["updated_at", "2018-02-09 12:59:33.528255"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Where they do that at?"], ["meaning", "-used when expressing disapproval of an action or behavior."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.532598"], ["updated_at", "2018-02-09 12:59:33.532598"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "A hit dog will holla!"], ["meaning", "-a person guilty of a charge, will be the first to attempt to defend themselves."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.537020"], ["updated_at", "2018-02-09 12:59:33.537020"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Aint got a pot to piss in or a window to throw it out."], ["meaning", "-usually said to a person, especially a child, who is ungrateful or complaining about what they don’t have when they have no money to support or provide for themselves."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.542690"], ["updated_at", "2018-02-09 12:59:33.542690"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Tell me why…"], ["meaning", "- usually preceding a long rant wherein the speaker has been wronged, slighted, or otherwise surprised with an undesirable occurrence."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.548285"], ["updated_at", "2018-02-09 12:59:33.548285"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "All up in the mustard, tryna play ketchup."], ["meaning", "-used when one joins a conversation at the most inopportune/irrational time."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.552916"], ["updated_at", "2018-02-09 12:59:33.552916"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Who you finna try? (I bet it ain’t me!)"], ["meaning", "-a term used to ask: Who do you think you’re messing with?"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.557341"], ["updated_at", "2018-02-09 12:59:33.557341"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Quit acting all brand new."], ["meaning", "-stop pretending you’re not familiar with this situation."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.561251"], ["updated_at", "2018-02-09 12:59:33.561251"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Don’t make me get ugly."], ["meaning", "-usually stated as a warning to the foolish."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.565110"], ["updated_at", "2018-02-09 12:59:33.565110"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Keep my name out yo mouth!"], ["meaning", "-said as a warning to a shit talker, ignoring this request may result in a beat down."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.569233"], ["updated_at", "2018-02-09 12:59:33.569233"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "I know you aint talking!"], ["meaning", "-used to demonstrate shock towards someone having an opinion on a situation they are clearly guilty of"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.573580"], ["updated_at", "2018-02-09 12:59:33.573580"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Make you wanna slap yo momma"], ["meaning", "-used when something tastes or is good."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.577884"], ["updated_at", "2018-02-09 12:59:33.577884"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Lawd, if it ain’t one thing it’s another."], ["meaning", "-used when bad things happen back to back"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.582391"], ["updated_at", "2018-02-09 12:59:33.582391"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Who the hell you think you talkin’ to?"], ["meaning", "-generally an indicator that you have said something wrong. The only proper response is 'nobody'"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.587154"], ["updated_at", "2018-02-09 12:59:33.587154"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Lowkey..."], ["meaning", "-a general introduction to an unpopular/unshared opinion, or that which one is reluctant to admit."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.591951"], ["updated_at", "2018-02-09 12:59:33.591951"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Let me find out…"], ["meaning", "-usually said before some gossip one thinks they know about, but hasn’t been told yet. Or to already insinuate one does not approve of said gossip"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.596792"], ["updated_at", "2018-02-09 12:59:33.596792"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Don’t let the smooth taste fool you."], ["meaning", "-used when referring to a person who thinks you are unwilling or unable to defend yourself because of your looks, charms or sophisticated behavior."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.602125"], ["updated_at", "2018-02-09 12:59:33.602125"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Ain’t nothing open after midnight but legs and liquor stores."], ["meaning", "-usually said to prove there is no good reason to be out late."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.607010"], ["updated_at", "2018-02-09 12:59:33.607010"]]
+  [1m[35m (11.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "That’s my cousin."], ["meaning", "-usually said for a person that is not your cousin, but is like family, or considered relative. May also genuinely just be a cousin."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.621486"], ["updated_at", "2018-02-09 12:59:33.621486"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "I brought you into this world, and I’ll take you out!"], ["meaning", "-usually said to disobedient children as a threat."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.626498"], ["updated_at", "2018-02-09 12:59:33.626498"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "It’s so quiet you can hear a rat piss on cotton."], ["meaning", "-said to emphasize how quiet something is."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.630702"], ["updated_at", "2018-02-09 12:59:33.630702"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Tore up from the floor up."], ["meaning", "-when something is completed out of order, unacceptable."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.634868"], ["updated_at", "2018-02-09 12:59:33.634868"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "_______ as the day is long."], ["meaning", "-meaning obvious or unremittingly; stating something that is tied and true as, comparatively, long days"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.638732"], ["updated_at", "2018-02-09 12:59:33.638732"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "If you like it, I love it."], ["meaning", "-used to describe acceptance of one’s life choices"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.642793"], ["updated_at", "2018-02-09 12:59:33.642793"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Tell the truth and shame the devil."], ["meaning", "-tell the truth even though you want to hide it."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.646867"], ["updated_at", "2018-02-09 12:59:33.646867"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "On my mama"], ["meaning", "-usually said to convey that on your mother’s life you are telling the truth."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.650866"], ["updated_at", "2018-02-09 12:59:33.650866"]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "HOW YOU GON TELL ME?"], ["meaning", "-how African Americans validate themselves/ourselves as a source"], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.657820"], ["updated_at", "2018-02-09 12:59:33.657820"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "A closed mouth don’t get fed."], ["meaning", "-speak up if you want something."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.662087"], ["updated_at", "2018-02-09 12:59:33.662087"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "I used to walk 5 miles everyday to get to school."], ["meaning", "-old folks responding to youngsters complaining about school to emphasize the privilege of education they enjoy today."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.666757"], ["updated_at", "2018-02-09 12:59:33.666757"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Sweep around your own front door, before you try to sweep around mine."], ["meaning", "-usually said when one feels the need to judge you/your life, but need to evaluate their own life/circumstances."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.671179"], ["updated_at", "2018-02-09 12:59:33.671179"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Real talk though."], ["meaning", "-a statement of being in agree or an introductory statement to the realest thing you will hear all day."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.676074"], ["updated_at", "2018-02-09 12:59:33.676074"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Thats my cue!"], ["meaning", "-usually said once something problematic has been said or done that will most likely end in an argument or worse."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.680654"], ["updated_at", "2018-02-09 12:59:33.680654"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Quick, Fast, and In a hurry."], ["meaning", "-a common phrase used to express how quickly one should complete an action."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.685692"], ["updated_at", "2018-02-09 12:59:33.685692"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Beggars can’t be choosers."], ["meaning", "-a way to say be grateful for what is given to you if and when you dont have the means to purchase things for yourself."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.690173"], ["updated_at", "2018-02-09 12:59:33.690173"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "You either stay in or stay out, but you ain’t bout to be running in and out of my house!"], ["meaning", "-said to a child minutes before they are locked either in or out of the house."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.694192"], ["updated_at", "2018-02-09 12:59:33.694192"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Your hair is LAID!"], ["meaning", "-your hair is exceptionally well done."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.698714"], ["updated_at", "2018-02-09 12:59:33.698714"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Don’t cut your glory!"], ["meaning", "-because hair is often referred to as a crown of glory, this is said to discourage women from cutting their hair."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.702787"], ["updated_at", "2018-02-09 12:59:33.702787"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Can I live?"], ["meaning", "-why are you worried about what I am doing? Let me do what I want without judgement."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.707080"], ["updated_at", "2018-02-09 12:59:33.707080"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "… And?"], ["meaning", "-1.your statement is not an adequate or valid enough point/excuse thereby dismissed 2. a response indicating that your previous statement is missing crucial information "], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.711131"], ["updated_at", "2018-02-09 12:59:33.711131"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "You ain’t never lied!"], ["meaning", "-said in agreement with someone’s statement."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.715155"], ["updated_at", "2018-02-09 12:59:33.715155"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "You all up in the Kool-Aid, and don’t know the flavor!"], ["meaning", "-used when someone is attempting to insert their opinion into a conversation without fully knowing what is being discussed."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.719350"], ["updated_at", "2018-02-09 12:59:33.719350"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "proverbs" ("content", "meaning", "source", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "Your daddy wasn’t a glass-maker."], ["meaning", "-usually said to emphasize that a person is blocking your view and you can not see through them."], ["source", "blkproverbs tumblr"], ["created_at", "2018-02-09 12:59:33.722985"], ["updated_at", "2018-02-09 12:59:33.722985"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProverb Load (1.0ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProverb Load (0.5ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY "proverbs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]

@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20180209040450) do
   enable_extension "plpgsql"
 
   create_table "proverbs", force: :cascade do |t|
-    t.text "content"
-    t.text "meaning"
-    t.string "source"
+    t.string "content", null: false
+    t.string "meaning", null: false
+    t.string "source", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

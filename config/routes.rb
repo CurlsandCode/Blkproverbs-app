@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+ 
   
   scope '/api' do
    get 'proverbs/random', to: 'proverbs#random'

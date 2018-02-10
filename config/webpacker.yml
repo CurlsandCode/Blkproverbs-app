@@ -14,6 +14,7 @@ default: &default
   cache_manifest: false
 
   extensions:
+    - .jsx
     - .js
     - .sass
     - .scss
@@ -31,8 +32,8 @@ development:
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
     https: false
-    host: localhost
-    port: 3035
+    host: blkproverbs-app-cookiecrumbs.c9users.io
+    port: 8081
     public: localhost:3035
     hmr: false
     # Inline should be set to true if using HMR

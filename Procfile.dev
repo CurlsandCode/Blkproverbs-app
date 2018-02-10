@@ -1,2 +1,2 @@
-web: cd blkproverbs-app-client && PORT=8080 npm start
-api: PORT=8081 && bundle exec rails s
+web: cd blkproverbs-app-client && PORT=8082 npm start
+api: PORT=8080 && bundle exec rails s

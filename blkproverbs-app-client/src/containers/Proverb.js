@@ -15,7 +15,7 @@ class Proverb extends Component {
 
 		const {proverb, meaning,source} = this.props;
 		if (!proverb && !meaning && !source) {
-			return <div > loading < /div>
+			return <span className="icon"> <h2>LOADING </h2> <i class="fas fa-sync fa-spin" /> </span>
 		}
 		return ( 
 			<div className = "container" >
@@ -30,7 +30,7 @@ class Proverb extends Component {
 			   proverb = {proverb}
 			   source = {source}
 			  />
-			</div> 
+		   </div> 
 			</div>
 		);
 	}

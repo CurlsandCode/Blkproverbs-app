@@ -6,7 +6,7 @@ export default function TweetButton({ proverb, source }) {
 
   return (
     <a
-      className="social"
+      className="btn btn-info social"
       href={tweetLink}
       title="Tweet this proverb!"
       target="_blank"
@@ -15,7 +15,7 @@ export default function TweetButton({ proverb, source }) {
       <span className="icon">
         <i className="fa fa-twitter" />
       </span>
-      <span>Tweet</span>
+      <span> Tweet</span>
     </a>
   );
 }

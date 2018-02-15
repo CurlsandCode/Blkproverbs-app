@@ -27,7 +27,6 @@ p {
   width: 100%;
   max-width: none;
   height: 100%;
-  padding: 10vh 20px 0;
   transition: 1s background-color;
 }
 
@@ -39,18 +38,13 @@ p {
   padding: 20px;
   transform: translateX(-50%);
   border-radius: 10px;
-  background-color: #ccc;
-}
-
-.wrapper button {
-  position: absolute;
-  bottom: 20px;
+  background-color: #fff;
 }
 
 .social {
-  position: absolute;
-  right: 20px;
+  right: 10px;
   bottom: 20px;
+	text-decoration: none;
 }
 
 .btn {
@@ -62,13 +56,22 @@ p {
   line-height: 1.25;
   border-radius: .25rem;
   transition: all .15s ease-in-out;
+	margin-left: .75rem;
 }
 
 .btn-info {
   color: #fff;
-  background-color: #17a2b8;
+  background-color:#ffd400;
 }
 
 a {
-  color: #007bff;
+	text-decoration: none;
+	color: #ffd400;
+}
+
+.title {
+    color: #363636;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.125;
 }

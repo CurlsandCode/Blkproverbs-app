@@ -537,3 +537,376 @@ Migrating to CreateProverbs (20180209040450)
   [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mProverb Load (2.4ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[35m (4.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "proverbs"[0m
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 22:08:28 +0900
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (14.2ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 135ms (Views: 3.4ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 22:43:54 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (23.1ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 465ms (Views: 15.7ms | ActiveRecord: 161.5ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 22:44:06 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (1.1ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 22:44:15 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (1.0ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 22:45:22 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (28.2ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 211ms (Views: 11.5ms | ActiveRecord: 28.2ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 22:51:27 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (10.8ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 7.7ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:02:56 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (14.3ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 9.1ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:05:26 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (24.9ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 117ms (Views: 9.4ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:05:44 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (2.9ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 15ms (Views: 2.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:25:03 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (26.3ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 15.9ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:26:28 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (5.1ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 6.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:26:50 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (6.4ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 3.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:28:44 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (7.1ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 232ms (Views: 12.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:30:15 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (4.9ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 9.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:31:46 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (4.0ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 8.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:35:06 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (9.7ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 11.3ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:37:03 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (6.4ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 14.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:39:58 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.6ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 7.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:45:01 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (28.5ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 114ms (Views: 13.1ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:46:09 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (70.8ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 281ms (Views: 10.5ms | ActiveRecord: 70.8ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:47:03 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.8ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 7.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:47:59 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (13.1ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 163ms (Views: 23.0ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:48:07 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.8ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 2.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:48:42 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.6ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 12.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:53:14 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.3ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 6.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:53:23 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (5.4ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 4.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:54:06 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (4.6ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 8.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:55:58 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (4.4ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 8.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-15 23:57:42 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (4.1ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 7.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:01:32 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (16.6ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 685ms (Views: 36.6ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:01:57 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.3ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 4.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:04:56 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.3ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 7.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:06:46 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.7ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 6.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:07:34 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (4.0ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 8.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:08:05 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (6.2ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 10.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:08:20 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (5.6ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 10.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:09:33 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (4.8ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 6.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:13:30 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (31.6ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 163ms (Views: 11.6ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:15:11 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.9ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 6.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:16:00 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.9ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 12.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:17:08 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (4.1ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 15.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:17:46 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (5.1ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 9.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:19:12 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (8.0ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 15.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:20:53 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (8.2ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 13.9ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:23:56 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (6.6ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 14.5ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:24:07 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (2.7ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 5.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:25:09 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (4.1ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 7.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:27:33 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (32.4ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 153ms (Views: 13.8ms | ActiveRecord: 32.4ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:45:38 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (27.9ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 144ms (Views: 18.7ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:47:19 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (3.4ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 7.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:54:30 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (29.6ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 122ms (Views: 15.5ms | ActiveRecord: 29.6ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:56:27 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (66.4ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 182ms (Views: 19.1ms | ActiveRecord: 66.4ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 00:58:05 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (35.4ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 241ms (Views: 21.1ms | ActiveRecord: 35.4ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 01:00:16 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (130.5ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 460ms (Views: 31.9ms | ActiveRecord: 130.5ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 01:02:11 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (95.3ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 449ms (Views: 72.5ms | ActiveRecord: 95.3ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 01:02:40 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (35.5ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 363ms (Views: 89.8ms | ActiveRecord: 35.5ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 01:03:58 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (53.9ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 307ms (Views: 21.4ms | ActiveRecord: 53.9ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 01:04:21 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (71.7ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 252ms (Views: 10.4ms | ActiveRecord: 71.7ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 01:05:02 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (5.1ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 14.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 01:05:12 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (5.7ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 1.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 01:05:16 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (2.2ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/proverbs/random" for 127.0.0.1 at 2018-02-16 01:05:33 +0900
+Processing by ProverbsController#random as */*
+  [1m[36mProverb Load (2.9ms)[0m  [1m[34mSELECT  "proverbs".* FROM "proverbs" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 2.3ms | ActiveRecord: 2.9ms)
+
+

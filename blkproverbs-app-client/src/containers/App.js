@@ -8,16 +8,14 @@ import About from '../components/About';
 import Footer from '../components/Footer';
 
 
-
-
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-			<header className="App-header">
-       </header>
-        <Router>
+			 <header className="App-header">
+        </header>
+         <Router>
           <div>
             <Navbar />
             <Route exact path="/" component={Home} />
@@ -25,7 +23,7 @@ class App extends Component {
             <Route exact path="/about" component={About} />
           </div>
         </Router>
-        <Footer />
+       <Footer />
       </div>
     );
   }

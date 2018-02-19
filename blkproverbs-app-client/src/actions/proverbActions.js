@@ -7,4 +7,4 @@ export function getProverb(){
     .then(proverb => dispatch({type: "GET_PROVERB", payload: proverb}))
     .catch(error => console.log(error));
  }
-}98
+}

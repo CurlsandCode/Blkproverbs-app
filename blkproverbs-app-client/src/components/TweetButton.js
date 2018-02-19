@@ -1,8 +1,9 @@
-import React from 'react';
-
+import React from "react";
 
 export default function TweetButton({ proverb, source }) {
-  const tweetLink = `https://twitter.com/intent/tweet?hashtags=blkproverbs&text=${encodeURIComponent(`"${proverb}" ${source}`)}`;
+  const tweetLink = `https://twitter.com/intent/tweet?hashtags=blkproverbs&text=${encodeURIComponent(
+    `"${proverb}" ${source}`
+  )}`;
 
   return (
     <a

@@ -1,6 +1,6 @@
 const initialState = {
   proverb: null,
-	meaning: null,
+  meaning: null,
   source: null
 };
 
@@ -9,8 +9,8 @@ export default function proverbsReducer(state = initialState, action) {
     case "GET_PROVERB":
       return {
         proverb: action.payload.content,
-				meaning: action.payload.meaning,
-        source: action.payload.source,
+        meaning: action.payload.meaning,
+        source: action.payload.source
       };
     default:
       return state;

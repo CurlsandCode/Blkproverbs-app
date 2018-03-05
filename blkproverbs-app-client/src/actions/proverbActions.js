@@ -36,4 +36,27 @@ export function addProverb(proverb){
       })
    }
  }
-			
+
+export const addLike = proverb => {
+	return {
+		type: "LIKE_PROVERB",
+		proverb
+	}
+}
+
+export const likeProverb = (proverb) => {
+	return dispatch => {
+		return fetch (`api/proverbs/${proverb.id}`,{
+			method: "PATCH",
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ like: proverb.like + 1 })
+    })
+		 .then(res => res.json())
+		 .then(proverb => {
+			dispatch(addLike (proverb))
+		})
+	}
+}

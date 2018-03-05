@@ -1,33 +1,31 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { likeProverb } from '../actions/proverbActions';
 
-class Listed extends Component {
-	constructor (props) {
-		super (props);
-		this.state = {
-			likes : 0
-		};
-	}
-		likeProverb = () => {
-			this.setState({
-				likes : this.state.likes + 1 });
-			}
+	class Listed extends Component {
+	
 		render (){
-			return (
-		
-  <div>
-    <div className="mb-3 text-center">
-      <div>
-       <p><q>{this.props.proverb.content}</q></p>
-        <p>{this.props.proverb.meaning}</p>
-         <footer>- <cite title="Source Title">{this.props.proverb.source}</cite></footer>
+	    const {id, content, meaning, source, like} = this.props.proverb;
+	return (
+		 <div>
+    	<div className="mb-3 text-center">
+       <div key={id} >
+       	<p><q>{content}</q></p>
+        <p>{meaning}</p>
+         <footer>- <cite title="Source Title">{source}</cite></footer>
 				 <button  
 				  className= "btn"
-				  onClick={this.likeProverb}> {this.state.likes} Like(s)
+				  onClick={this.props.likeProverb}> {like} Like(s)
 			   </button> 
          </div>
      </div>
    </div>
 	)
  }
+};
+
+const mapStateToProps = (state) => {
+  return { proverbs: state.proverbs}
 }
-export default Listed;
+
+export default connect(mapStateToProps, {likeProverb}, null)(Listed);

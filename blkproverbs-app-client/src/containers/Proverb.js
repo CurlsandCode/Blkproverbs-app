@@ -30,6 +30,7 @@ class Proverb extends Component {
 }
 
 const mapStateToProps = state => {
+	console.log(state)
   return {
     proverb: state.proverb,
     meaning: state.meaning,

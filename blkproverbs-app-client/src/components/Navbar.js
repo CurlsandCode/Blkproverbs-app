@@ -10,10 +10,22 @@ const Navbar = () => {
             BlkProverbs
           </NavLink>
         </li>
+		    <li>
+          <NavLink to="/proverbs" name="Proverbs">
+            {" "}
+            All Proverbs
+          </NavLink>
+        </li>
         <li>
           <NavLink to="/proverb" name="Proverb">
             {" "}
             Random Proverb
+          </NavLink>
+        </li>
+		    <li>
+          <NavLink to="/addproverb" name="Add Proverb">
+            {" "}
+            Add Proverb
           </NavLink>
         </li>
         <li>

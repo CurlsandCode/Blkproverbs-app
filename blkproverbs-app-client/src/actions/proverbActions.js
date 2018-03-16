@@ -40,7 +40,7 @@ export function addProverb(proverb){
 export const addLike = proverb => {
 	return {
 		type: "LIKE_PROVERB",
-		proverb
+		payload: proverb
 	}
 }
 
@@ -56,7 +56,7 @@ export const likeProverb = (proverb) => {
     })
 		 .then(res => res.json())
 		 .then(proverb => {
-			dispatch(addLike (proverb))
+			dispatch(addLike(proverb))
 		})
 	}
 }

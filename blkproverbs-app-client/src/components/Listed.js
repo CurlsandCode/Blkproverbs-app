@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { likeProverb } from '../actions/proverbActions';
 
 	class Listed extends Component {
 	
 		render (){
-	    const {id, content, meaning, source, like} = this.props.proverb;
+			const proverb = this.props.proverb;
+	    const {id, content, meaning, source, like} = proverb;
+		
 	return (
 		 <div>
     	<div className="mb-3 text-center">
@@ -15,7 +15,7 @@ import { likeProverb } from '../actions/proverbActions';
          <footer>- <cite title="Source Title">{source}</cite></footer>
 				 <button  
 				  className= "btn"
-				  onClick={this.props.likeProverb}> {like} Like(s)
+				  onClick={(proverb) => this.props.likeProverb(proverb)}> {like} Like(s)
 			   </button> 
          </div>
      </div>
@@ -24,8 +24,6 @@ import { likeProverb } from '../actions/proverbActions';
  }
 };
 
-const mapStateToProps = (state) => {
-  return { proverbs: state.proverbs}
-}
 
-export default connect(mapStateToProps, {likeProverb}, null)(Listed);
+
+export default Listed;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getAllProverbs } from "../actions/proverbActions";
+import { getAllProverbs, likeProverb } from "../actions/proverbActions";
 import Listed from '../components/Listed';
 
 class ProverbsList extends Component {
@@ -11,7 +11,7 @@ class ProverbsList extends Component {
 	
 
   render() {
-    const {proverbs} = this.props;
+    const {proverbs, likeProverb} = this.props;
     return (
       <div>
         <div className="row justify-content-center">
@@ -22,7 +22,7 @@ class ProverbsList extends Component {
           <div className="row">
             <div>
 							{proverbs.map(proverb => 
-			         <Listed key={proverb.id} proverb={proverb}/> 
+			         <Listed key={proverb.id} proverb={proverb} likeProverb={likeProverb} /> 
 			           )}
 			       </div>
           </div>
@@ -41,5 +41,5 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, {
-  getAllProverbs
+  getAllProverbs, likeProverb
 })(ProverbsList);

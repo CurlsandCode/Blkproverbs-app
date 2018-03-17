@@ -11,7 +11,10 @@ import registerServiceWorker from './registerServiceWorker';
 //import {createLogger} from 'redux-logger'
 //const logger = createLogger({collapsed: true})
 
-const store = createStore(proverbsReducer, applyMiddleware(thunk))
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const store = createStoreWithMiddleware(proverbsReducer,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
 ReactDOM.render(
 	<Provider store={store}>
     <App />

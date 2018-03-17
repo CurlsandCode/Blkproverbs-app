@@ -24,14 +24,10 @@ export default function proverbsReducer(state = initialState, action) {
 			})
 
 		case "LIKE_PROVERB":
-			return state.proverbs.map((proverb) => {
-				if (proverb.id === action.proverb.id) {
-					return action.proverb
-				} else {
-					return proverb;
-				}
-			});
-	
+			const { proverbs } = state;
+			const idx = proverbs.findIndex(proverb => proverb.id === action.payload.id);
+			proverbs[idx].like += 1;
+			return { ...state, proverbs }
 
 	default:
 	return state;

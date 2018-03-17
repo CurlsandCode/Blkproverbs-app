@@ -3,19 +3,18 @@ import React, { Component } from 'react';
 	class Listed extends Component {
 	
 		render (){
-			const proverb = this.props.proverb;
-	    const {id, content, meaning, source, like} = proverb;
-		
+			const { id, meaning, content, source, like } = this.props.proverb;
+		//console.log('this is the proverb', proverb)
 	return (
 		 <div>
     	<div className="mb-3 text-center">
-       <div key={id} >
+       <div>
        	<p><q>{content}</q></p>
         <p>{meaning}</p>
          <footer>- <cite title="Source Title">{source}</cite></footer>
 				 <button  
 				  className= "btn"
-				  onClick={(proverb) => this.props.likeProverb(proverb)}> {like} Like(s)
+				  onClick={() => this.props.likeProverb(this.props.proverb)}> {like} Like(s)
 			   </button> 
          </div>
      </div>

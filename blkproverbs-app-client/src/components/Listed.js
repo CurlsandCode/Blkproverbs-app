@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 	class Listed extends Component {
 	
 		render (){
-			const { id, meaning, content, source, like } = this.props.proverb;
+			const { meaning, content, source, like } = this.props.proverb;
 		//console.log('this is the proverb', proverb)
 	return (
 		 <div>

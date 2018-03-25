@@ -12,7 +12,8 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'foreman', '~> 0.82.0'
 gem 'rack-cors', :require => 'rack/cors'
-
+gem 'pry'
+gem 'loofah', '~> 2.2.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

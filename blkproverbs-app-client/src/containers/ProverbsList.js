@@ -6,11 +6,10 @@ import Listed from '../components/Listed';
 class ProverbsList extends Component {
   componentDidMount() {
 		this.props.getAllProverbs();
+		
   }
 	
-	
-
-  render() {
+render() {
     const {proverbs, likeProverb} = this.props;
     return (
       <div>
